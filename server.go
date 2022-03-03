@@ -8,6 +8,7 @@ import (
 	"github.com/MijailStell/go-with-gin/middleware"
 	"github.com/MijailStell/go-with-gin/service"
 	"github.com/gin-gonic/gin"
+	gindump "github.com/tpkeeper/gin-dump"
 )
 
 var (
@@ -23,7 +24,10 @@ func setupLogOutPut() {
 func main() {
 	setupLogOutPut()
 	server := gin.New()
-	server.Use(gin.Recovery(), middleware.Logger(), middleware.BasicAuth())
+	server.Use(gin.Recovery(),
+		middleware.Logger(),
+		middleware.BasicAuth(),
+		gindump.Dump())
 
 	server.GET("/videos", func(ctx *gin.Context) {
 		ctx.JSON(200, videoController.FindAll())

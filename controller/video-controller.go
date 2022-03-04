@@ -3,9 +3,10 @@ package controller
 import (
 	"net/http"
 
-	"github.com/MijailStell/go-with-gin/entity"
-	"github.com/MijailStell/go-with-gin/service"
-	customValidators "github.com/MijailStell/go-with-gin/validators"
+	"company/system/microservices/entity"
+	"company/system/microservices/service"
+	customValidators "company/system/microservices/validators"
+
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 )

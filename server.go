@@ -5,9 +5,10 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/MijailStell/go-with-gin/controller"
-	"github.com/MijailStell/go-with-gin/middleware"
-	"github.com/MijailStell/go-with-gin/service"
+	"company/system/microservices/controller"
+	"company/system/microservices/middleware"
+	"company/system/microservices/service"
+
 	"github.com/gin-gonic/gin"
 	gindump "github.com/tpkeeper/gin-dump"
 )

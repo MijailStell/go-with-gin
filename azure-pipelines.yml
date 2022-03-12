@@ -11,17 +11,51 @@ steps:
 - task: GoTool@0
   inputs:
     version: '1.17.7'
+  displayName: 'Get tools'
 - task: Go@0
   inputs:
     command: 'get'
     arguments: '-d'
+  displayName: 'Get dependencies'
+- task: Go@0
+  inputs:
+    command: 'test'
+    arguments: '-v ./service'
+  displayName: 'Run Unit test'
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: $(System.DefaultWorkingDirectory)/**/report.xml
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
 - task: Go@0
   inputs:
     command: 'build'
+  displayName: 'Go build'
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'SonarQube'
+    scannerMode: 'CLI'
+    configMode: 'file'
+- task: SonarQubeAnalyze@5
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
 - task: CopyFiles@2
   inputs:
     Contents: '$(artifactName).exe'
     TargetFolder: $(Build.ArtifactStagingDirectory)
+- task: CopyFiles@2
+  inputs:
+    Contents: 'web.config'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'templates'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)\templates'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'

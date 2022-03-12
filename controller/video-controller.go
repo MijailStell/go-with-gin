@@ -23,7 +23,7 @@ type videoController struct {
 
 var validate *validator.Validate
 
-func New(service service.VideoService) VideoController {
+func NewVideoController(service service.VideoService) VideoController {
 	validate = validator.New()
 	validate.RegisterValidation("is-gmail", customValidators.ValidateIsGmail)
 	return &videoController{

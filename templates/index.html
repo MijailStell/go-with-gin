@@ -1,12 +1,14 @@
 {{ template "header.html" }}
 
 <div class="album py-4 bg-light">
+    <h1>Galeria de videos</h1>
     <div class="container">
         <div class="row bs-examples">
             {{range .videos}}
                 <div class="col-xs-6 col-md-4">
                     <iframe src="{{.Url}}" width="300" height="200"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        title="videos"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
                     <h3>{{.Title}}</h3>

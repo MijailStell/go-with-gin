@@ -27,9 +27,11 @@ RUN go build
 
 # Remove source file
 RUN find . -name "*.go" -type f -delete
+RUN find . -name "*.mod" -type f -delete
+RUN find . -name "*.sum" -type f -delete
 
 # Make port 5000 available to the world outside this countainer
 EXPOSE $PORT
 
 # Run the app
-CMD [ "./go-with-gin" ]
+CMD [ "./microservices" ]

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.1904762" branch-rate="0" lines-covered="4" lines-valid="21" branches-covered="0" branches-valid="0" complexity="0" version="" timestamp="1646814221637">
+	<packages>
+		<package name="company/system/microservices/service" line-rate="0.1904762" branch-rate="0" complexity="0" line-count="21" line-hits="4">
+			<classes>
+				<class name="jwtService" filename="service\jwt-service.go" line-rate="0" branch-rate="0" complexity="0" line-count="7" line-hits="0">
+					<methods>
+						<method name="GenerateToken" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="46" hits="0"></line>
+								<line number="57" hits="0"></line>
+								<line number="60" hits="0"></line>
+								<line number="61" hits="0"></line>
+								<line number="62" hits="0"></line>
+								<line number="64" hits="0"></line>
+							</lines>
+						</method>
+						<method name="ValidateToken" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="68" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="46" hits="0"></line>
+						<line number="57" hits="0"></line>
+						<line number="60" hits="0"></line>
+						<line number="61" hits="0"></line>
+						<line number="62" hits="0"></line>
+						<line number="64" hits="0"></line>
+						<line number="68" hits="0"></line>
+					</lines>
+				</class>
+				<class name="-" filename="service\jwt-service.go" line-rate="0" branch-rate="0" complexity="0" line-count="8" line-hits="0">
+					<methods>
+						<method name="NewJWTService" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="29" hits="0"></line>
+							</lines>
+						</method>
+						<method name="getSecretKey" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="36" hits="0"></line>
+								<line number="37" hits="0"></line>
+								<line number="38" hits="0"></line>
+								<line number="40" hits="0"></line>
+							</lines>
+						</method>
+						<method name="@68:32" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="70" hits="0"></line>
+								<line number="71" hits="0"></line>
+								<line number="74" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="29" hits="0"></line>
+						<line number="36" hits="0"></line>
+						<line number="37" hits="0"></line>
+						<line number="38" hits="0"></line>
+						<line number="40" hits="0"></line>
+						<line number="70" hits="0"></line>
+						<line number="71" hits="0"></line>
+						<line number="74" hits="0"></line>
+					</lines>
+				</class>
+				<class name="-" filename="service\login-service.go" line-rate="0" branch-rate="0" complexity="0" line-count="1" line-hits="0">
+					<methods>
+						<method name="NewLoginService" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="13" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="13" hits="0"></line>
+					</lines>
+				</class>
+				<class name="loginService" filename="service\login-service.go" line-rate="0" branch-rate="0" complexity="0" line-count="1" line-hits="0">
+					<methods>
+						<method name="Login" signature="" line-rate="0" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="20" hits="0"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="20" hits="0"></line>
+					</lines>
+				</class>
+				<class name="-" filename="service\video-service.go" line-rate="1" branch-rate="0" complexity="0" line-count="1" line-hits="1">
+					<methods>
+						<method name="NewVideoService" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="15" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="15" hits="1"></line>
+					</lines>
+				</class>
+				<class name="videoService" filename="service\video-service.go" line-rate="1" branch-rate="0" complexity="0" line-count="3" line-hits="3">
+					<methods>
+						<method name="Save" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="19" hits="1"></line>
+								<line number="20" hits="1"></line>
+							</lines>
+						</method>
+						<method name="FindAll" signature="" line-rate="1" branch-rate="0" complexity="0" line-count="0" line-hits="0">
+							<lines>
+								<line number="24" hits="1"></line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="19" hits="1"></line>
+						<line number="20" hits="1"></line>
+						<line number="24" hits="1"></line>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+	<sources>
+		<source>D:\GitHub\go-with-gin</source>
+	</sources>
+</coverage>

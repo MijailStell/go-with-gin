@@ -44,21 +44,22 @@ $ bin/kafka-console-consumer.sh --topic foundDocumentEvented --bootstrap-server 
 $ bin/kafka-console-consumer.sh --topic searchDocumentEvented --bootstrap-server localhost:9092
 ```
 
-```bash
-$ go run .\server.go
-```
-
-```bash
-$ go run .\consumer\main.go
-```
-
-
 Ahora podemos realizar una petición al api del producer:
 
 ```bash
-POST http://localhost:5001/api/v1/account/searchDocumentEvent
+-- Primero obtener el token
+POST http://localhost:5001/login
 Content-Type: application/json
-POST data:
+{
+    "username": "pragmatic",
+    "password": "reviews"
+}
+
+-- Enviar el token en el header
+
+POST http://localhost:5001/api/v1/account/searchDocumentEvent HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicHJhZ21hdGljIiwiYWRtaW4iOnRydWUsImV4cCI6MTY1MTI5MDY4OCwiaWF0IjoxNjUxMDMxNDg4LCJpc3MiOiJwcmFnbWF0aWNyZXZpZXdzLmNvbSJ9.Hb9KocVQ8ZrI4msYgE2MwSptSukliZLgfcScW_Zw67g
+Content-Type: application/json
 {
     "document": "72579090"
 }

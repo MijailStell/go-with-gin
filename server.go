@@ -13,7 +13,6 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	gindump "github.com/tpkeeper/gin-dump"
 )
 
 var (
@@ -25,6 +24,7 @@ var (
 )
 
 const VIDEOS_ROOT = "/videos"
+const ACCOUNT_ROOT = "/v1/account/searchDocumentEvent"
 
 func setupLogOutPut() {
 	f, _ := os.Create("gin.log")
@@ -61,8 +61,7 @@ func main() {
 	server := gin.New()
 
 	server.Use(gin.Recovery(),
-		middleware.Logger(),
-		gindump.Dump())
+		middleware.Logger())
 
 	server.Static("/css", "./templates/css")
 
@@ -94,6 +93,12 @@ func main() {
 			} else {
 				ctx.JSON(http.StatusOK, gin.H{"message": "Video es válido."})
 			}
+		})
+
+		apiRoutes.POST(ACCOUNT_ROOT, func(ctx *gin.Context) {
+			log.Println("Inicio")
+			msg := videoController.Validate(ctx)
+			ctx.JSON(http.StatusOK, gin.H{"message": msg})
 		})
 	}
 

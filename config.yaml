@@ -4,7 +4,7 @@ SITE:
 
 SERVICE:
   PORT: "5001"
-  MODE: "debug"
+  MODE: "release"
 
 DB:
   HOST: "localhost"

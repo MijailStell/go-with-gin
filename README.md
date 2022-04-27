@@ -57,7 +57,7 @@ Content-Type: application/json
 
 -- Enviar el token en el header
 
-POST http://localhost:5001/api/v1/account/searchDocumentEvent HTTP/1.1
+POST http://localhost:5001/api/v1/account/searchDocumentEvent
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicHJhZ21hdGljIiwiYWRtaW4iOnRydWUsImV4cCI6MTY1MTI5MDY4OCwiaWF0IjoxNjUxMDMxNDg4LCJpc3MiOiJwcmFnbWF0aWNyZXZpZXdzLmNvbSJ9.Hb9KocVQ8ZrI4msYgE2MwSptSukliZLgfcScW_Zw67g
 Content-Type: application/json
 {
